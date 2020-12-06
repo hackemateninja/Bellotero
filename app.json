@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "bolletero",
-    "slug": "bolletero",
+    "name": "Bellotero",
+    "slug": "bellotero",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/iconsquare.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "With Bellotero.io you save time and money make real-time decisions that boost your business and your bottom line. Get less wrongfully blocked payments, save time on bookkeeping, and no need to worry about safety. ",
+    "githubUrl": "https://github.com/hackemateninja/Bellotero"
   }
 }

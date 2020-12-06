@@ -1,21 +1,30 @@
-import { StatusBar } from 'expo-status-bar';
+import 'react-native-gesture-handler';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import store from './src/state/state';
+// @ts-ignore
+import {Provider} from 'react-redux';
+import {enableScreens} from 'react-native-screens';
+import {ScreenContainer} from './src/components';
+import {StackNavigator} from './src/navigation';
+import {COLORS} from './src/constants';
+import {useLoadFonts} from './src/hooks';
+
+enableScreens();
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+
+  const isLoaded = useLoadFonts()
+
+  if (isLoaded) {
+    return (
+      <Provider store={store}>
+        <ScreenContainer color={COLORS.white}>
+          <StackNavigator/>
+        </ScreenContainer>
+      </Provider>
+    );
+  }else {
+    return null;
+  }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
