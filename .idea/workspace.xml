@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f47ed3cc-1ee0-42ab-9d69-f2325ddf4656" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Result.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Result.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Slider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Slider.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/Configurator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Configurator.tsx" afterDir="false" />
     </list>
@@ -53,7 +51,8 @@
       <workItem from="1607082390674" duration="928000" />
       <workItem from="1607105961611" duration="32782000" />
       <workItem from="1607273469410" duration="10138000" />
-      <workItem from="1607321837279" duration="1841000" />
+      <workItem from="1607321837279" duration="2073000" />
+      <workItem from="1607329727261" duration="286000" />
     </task>
     <servers />
   </component>

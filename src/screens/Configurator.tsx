@@ -39,11 +39,7 @@ function Configurator({calculator, getData}:Configurator) {
 
 	React.useEffect(()=>{
 		setFood(monthly * 0.3)
-		if (monthly === 0 && fullTime === 0 && food === 0) {
-			setYearly(fullTime)
-		}else {
-			setYearly(fullTime * 1337 + food)
-		}
+		setYearly(fullTime * 1337 + food)
 	}, [monthly, fullTime, food, yearly])
 
 	if (isLoad) {
@@ -76,8 +72,9 @@ function Configurator({calculator, getData}:Configurator) {
 							minValue={0}
 						/>
 						<CustomSlider
+							step={1}
 							description="Full-time employees that process invoices"
-							onValueChange={(val: any) => setFullTime(val.toFixed(2))}
+							onValueChange={(val: any) => setFullTime(val.toFixed())}
 							value={fullTime}
 							maxValue={10}
 							minValue={0}

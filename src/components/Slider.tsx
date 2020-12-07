@@ -17,6 +17,7 @@ interface CustomSlider {
 	maxValue: number;
 	description: string;
 	sign?: string;
+	step?: number
 }
 
 export default function CustomSlider ({
@@ -25,7 +26,8 @@ export default function CustomSlider ({
 		onValueChange,
 		minValue,
 		maxValue,
-		sign
+		sign,
+		step
 	}: CustomSlider) {
 
 	return (
@@ -50,6 +52,7 @@ export default function CustomSlider ({
 				thumbTintColor={COLORS.cobaltBlue}
 				value={value}
 				onValueChange={onValueChange}
+				step={step || 0}
 			/>
 		</View>
 	);
