@@ -1,7 +1,7 @@
 # Bellotero
 
-![QR](./assets/testimonial.png)
-![QR](./assets/calculator.png)
+![testimonial](./assets/testimonial.png)
+![calculator](./assets/calculator.png)
 
 **Bellotero is a simple calculator app, built in with expo, react native, redux, redux-thunk**
 

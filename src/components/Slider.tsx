@@ -16,6 +16,7 @@ interface CustomSlider {
 	minValue: number;
 	maxValue: number;
 	description: string;
+	sign?: string;
 }
 
 export default function CustomSlider ({
@@ -23,14 +24,15 @@ export default function CustomSlider ({
 		description,
 		onValueChange,
 		minValue,
-		maxValue
+		maxValue,
+		sign
 	}: CustomSlider) {
 
 	return (
 		<View style={styles.sliderContainer}>
 			<View style={styles.valueContainer}>
 				<Text style={styles.valueSign}>
-					$
+					{sign || ''}
 				</Text>
 				<Text style={styles.value}>
 					{value}

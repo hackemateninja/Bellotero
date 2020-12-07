@@ -39,16 +39,22 @@ function Configurator({calculator, getData}:Configurator) {
 
 	React.useEffect(()=>{
 		setFood(monthly * 0.3)
-		setYearly(fullTime * 1337 + food)
-	}, [monthly, fullTime])
+		if (monthly === 0 && fullTime === 0 && food === 0) {
+			setYearly(fullTime)
+		}else {
+			setYearly(fullTime * 1337 + food)
+		}
+	}, [monthly, fullTime, food, yearly])
 
 	if (isLoad) {
+		// @ts-ignore
+		const {title, description} = calculator
 		return (
 			<ScreenContainer color={COLORS.iceBlue}>
 				<View style={STYLES.screenContainer}>
-					<Title title={calculator.title}/>
+					<Title title={title}/>
 					<Text style={styles.description}>
-						{calculator.description}
+						{description}
 					</Text>
 					<View style={STYLES.rowBetweenCenter}>
 						<Result
@@ -62,15 +68,16 @@ function Configurator({calculator, getData}:Configurator) {
 					</View>
 					<View style={STYLES.rowBetweenCenter}>
 						<CustomSlider
+							sign="$"
 							description="Monthly ingredient spending"
-							onValueChange={(val) => setMonthly(val.toFixed(2))}
+							onValueChange={(val: any) => setMonthly(val.toFixed(2))}
 							value={monthly}
 							maxValue={100}
 							minValue={0}
 						/>
 						<CustomSlider
 							description="Full-time employees that process invoices"
-							onValueChange={(val) => setFullTime(parseInt(val))}
+							onValueChange={(val: any) => setFullTime(val.toFixed(2))}
 							value={fullTime}
 							maxValue={10}
 							minValue={0}
@@ -93,6 +100,7 @@ const styles = StyleSheet.create({
 	},
 });
 const mapStateToProps = (state: object) => {
+	// @ts-ignore
 	return state.page2.page2;
 }
 const mapDispatchToProps = (dispatch: ActionCreator<object>) => ({

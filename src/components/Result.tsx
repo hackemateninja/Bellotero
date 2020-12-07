@@ -10,8 +10,8 @@ import {
 } from '../constants';
 
 interface  Result {
-	value: number;
-	description: string
+	value: string;
+	description: string;
 }
 
 export default function Result({value, description}: Result) {
